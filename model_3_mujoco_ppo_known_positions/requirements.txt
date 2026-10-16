@@ -1,0 +1,7 @@
+# Python 3.12. torch is installed separately by setup_env.sh (its wheel index depends on GPU vs CPU).
+# Versions are the ones model 3 was trained and verified with.
+mujoco==3.12.0
+numpy==2.5.1
+tensordict==0.14.2
+rsl-rl-lib==5.5.1
+tensorboard==2.21.0
