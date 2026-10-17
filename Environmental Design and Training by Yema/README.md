@@ -1,0 +1,60 @@
+# Cordycepin SDL — Solution Architecture
+
+### Master Agent (Bayesian Optimization lives here)
+* Talks to the human. Owns the hypothesis. Schedules batches. Decides when a trial is done.
+* Optimizes experimental conditions: glucose, peptone, pH, Mg²⁺, inoculation ratio.
+
+### Supervisor Agent
+* Coordinates between arms. Allocates tasks. Resolves conflicts. Safety interrupts.
+
+### Arm Agents (this project — DRL)
+* Each arm is a DRL agent:
+	* State: tip position, target position, fluid level
+ 	* Action: joint commands
+	* Reward: reaching target + delivering correct volume
+* Multiple arms = multiple agents, trained independently.
+
+### Data Layer (Kafka / TML / Ollama)
+* Streams: humidity, temperature, pH, culture viability, arm telemetry. Retention: 24 hours.
+
+### Physical Layer
+* Robotic arms + reservoirs + petri dishes + sensors.
+
+## Our Specific Station: Nutrition Station
+* Human role: places petri dishes containing Cordyceps militaris anywhere on the table.
+* Robot role: aspirates nutrient solution from the beaker, dispenses into the petri dish — wherever it is.
+* This is the minimum viable autonomy layer. Human-in-the-loop is where SDLs start, not where they end.
+
+## Training the DRL Agents
+* Isaac Lab + teacher-student approach 
+    * sidesteps exploration via GPU parallelism and privileged state
+* CPU-based PPO/SAC 
+    * hit the sparse-reward wall mine 
+    * provides the diagnostic testbed
+    * reach_env.py — final state: beaker at (0.19, 0.44, 0.82), success threshold 0.08m, linear reward
+    * train_reach.py — SAC configuration (buffer_size=100k, batch_size=256)
+    * Training logs: PPO @ 0.14m, PPO @ 0.105m, SAC @ 0.105m
+
+## DRL + Bayesian Optimization
+
+
+| Layer | Method | What it optimizes |
+| :---: | :---: | :--- |
+| Master Agent |Bayesian Optimization | Experimental conditions (glucose, pH, etc.) and yield across batches |
+| Arm Agents | Deep RL (PPO/SAC) | Low-level motor control for liquid transfer |
+
+Bayesian optimization is sample-efficient for expensive, batch-level biological experiments. DRL is for continuous control at the arm level. They’re complementary, not competing.
+
+## Next steps:
+* Upload our individual docs to repository ✅
+* Try each other’s training code
+* Re-develop curriculuum
+    * Start basic and add complexity later
+        * 1 beaker in a static location —> 1 Petri dish that randomly moves position 
+            *  must learn petri location and navigate to it
+        * 2 beakers 
+    * Franka emika panda but with 3 fingers!!!!!
+    * Knows coordinates & visual locations of all objects
+* Determine the best training: 
+    * PPO?
+    * Teacher-student
