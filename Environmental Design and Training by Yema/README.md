@@ -1,4 +1,4 @@
-# Where this class project fit's in Yema's Broader Solution Architecture
+# Where this class project fit's in Yema's broader Solution Architecture
 
 ### Master Agent (Bayesian Optimization lives here)
 * Talks to the human. Owns the hypothesis. Schedules batches. Decides when a trial is done.
