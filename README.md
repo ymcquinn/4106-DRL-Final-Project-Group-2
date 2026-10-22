@@ -27,7 +27,6 @@ by: Yema, Natkeeran, and Neil
 # This Project's Scope: The Nutrition Station
 * Human role: places petri dishes containing Cordyceps militaris anywhere on the table.
 * Robot role: uses a pipette to aspirate nutrient solution from a stationary beaker and dispense the liquid into a randomly located petri dish 
-* This is the minimum viable autonomy layer. Human-in-the-loop is where SDLs start, not where they end.
 
 ## Training the DRL Agents
 * Isaac Lab + teacher-student approach 
@@ -42,17 +41,6 @@ by: Yema, Natkeeran, and Neil
  	* Natkeeran's tests
 		* The agent realized that the fastest way to get liquid from the beaker to the Petri dish is to smash through the beaker lol, making the 96% success rate actually a 0% success rate
  
-
-## DRL + Bayesian Optimization
-
-
-| Layer | Method | What it optimizes |
-| :---: | :---: | :--- |
-| Master Agent |Bayesian Optimization | Experimental conditions (glucose, pH, etc.) and yield across batches |
-| Arm Agents | Deep RL (PPO/SAC) | Low-level motor control for liquid transfer |
-
-Bayesian optimization is sample-efficient for expensive, batch-level biological experiments. DRL is for continuous control at the arm level. They’re complementary, not competing.
-
 # Next steps:
 * Upload our individual docs to repository ✅
 * Combine Yema's & Natkeeran's PPO training codes 
