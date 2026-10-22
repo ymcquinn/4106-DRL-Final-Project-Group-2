@@ -24,9 +24,9 @@ by: Yema, Natkeeran, and Neil
 ### Physical Layer
 * Robotic arms + reservoirs + petri dishes + sensors.
 
-# This Project's Scope: The Nutrition Station
+# This Project's Scope: 1 Arm
 * Human role: places petri dishes containing Cordyceps militaris anywhere on the table.
-* Robot role: uses a pipette to aspirate nutrient solution from a stationary beaker and dispense the liquid into a randomly located petri dish 
+* Robot role: one arm that uses a pipette to aspirate nutrient solution from a stationary beaker and dispense the liquid into a randomly located petri dish 
 
 ## Training the DRL Agents
 * Isaac Lab + teacher-student approach 
