@@ -28,12 +28,16 @@
 ## Training the DRL Agents
 * Isaac Lab + teacher-student approach 
     * sidesteps exploration via GPU parallelism and privileged state
-* CPU-based PPO/SAC 
-    * hit the sparse-reward wall mine 
-    * provides the diagnostic testbed
-    * reach_env.py — final state: beaker at (0.19, 0.44, 0.82), success threshold 0.08m, linear reward
-    * train_reach.py — SAC configuration (buffer_size=100k, batch_size=256)
-    * Training logs: PPO @ 0.14m, PPO @ 0.105m, SAC @ 0.105m
+* CPU-based PPO/SAC
+  	* Yema's tests 
+    	* hit the sparse-reward wall mine 
+   	 	* provides the diagnostic testbed
+   		* reach_env.py — final state: beaker at (0.19, 0.44, 0.82), success threshold 0.08m, linear reward
+   	 	* train_reach.py — SAC configuration (buffer_size=100k, batch_size=256)
+   		* Training logs: PPO @ 0.14m, PPO @ 0.105m, SAC @ 0.105m
+ 	* Natkeeran's tests
+		* The agent realized that the fastest way to get liquid from the beaker to the Petri dish is to smash through the beaker lol, making the 96% success rate actually a 0% success rate
+ 
 
 ## DRL + Bayesian Optimization
 
@@ -47,14 +51,4 @@ Bayesian optimization is sample-efficient for expensive, batch-level biological 
 
 ## Next steps:
 * Upload our individual docs to repository ✅
-* Try each other’s training code
-* Re-develop curriculuum
-    * Start basic and add complexity later
-        * 1 beaker in a static location —> 1 Petri dish that randomly moves position 
-            *  must learn petri location and navigate to it
-        * 2 beakers 
-    * Franka emika panda but with 3 fingers!!!!!
-    * Knows coordinates & visual locations of all objects
-* Determine the best training: 
-    * PPO?
-    * Teacher-student
+* Combine Yema's & Natkeeran's PPO training codes 
