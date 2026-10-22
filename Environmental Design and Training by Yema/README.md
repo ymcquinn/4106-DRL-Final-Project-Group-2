@@ -1,4 +1,4 @@
-# Cordycepin SDL — Solution Architecture
+# Where this class project fit's in Yema's Broader Solution Architecture
 
 ### Master Agent (Bayesian Optimization lives here)
 * Talks to the human. Owns the hypothesis. Schedules batches. Decides when a trial is done.
@@ -20,7 +20,7 @@
 ### Physical Layer
 * Robotic arms + reservoirs + petri dishes + sensors.
 
-## Our Specific Station: Nutrition Station
+## This project: The Nutrition Station
 * Human role: places petri dishes containing Cordyceps militaris anywhere on the table.
 * Robot role: aspirates nutrient solution from the beaker, dispenses into the petri dish — wherever it is.
 * This is the minimum viable autonomy layer. Human-in-the-loop is where SDLs start, not where they end.
