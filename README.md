@@ -198,9 +198,10 @@ The scripted control confirms the fix is fair: correct behavior still succeeds 1
 
 ### Video evidence
 
-### Video evidence
+> **Video status:** recorded, not yet uploaded. Will be renamed and pushed to
+> `docs/videos/` this weekend. Files referenced below are the planned names.
 
-Screen recordings in `docs/videos/`:
+TO BE UPLOADED:
 
 | File | What it shows | Reward | Warmup | Key numbers |
 |---|---|---|---|---|
