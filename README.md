@@ -198,10 +198,20 @@ The scripted control confirms the fix is fair: correct behavior still succeeds 1
 
 ### Video evidence
 
-Screen recordings of Runs B and C are in `docs/videos/`:
+### Video evidence
 
-- `exploit_penetration_v6.mp4` — v4 policy triggering penetration terminations under v6 (warmup off). The pipette is visible passing through the beaker wall.
-- `scripted_success_v6.mp4` — scripted controller executing correctly under v6 (warmup off). No penetration.
+Screen recordings in `docs/videos/`:
+
+| File | What it shows | Reward | Warmup | Key numbers |
+|---|---|---|---|---|
+| `v5_v4_policy_v4_reward_warmup_on.mov` | Baseline: v4-trained policy delivering fluid under v4 reward. This is the "87.4% success" number in context. | v4 | on | 151 eps, 132 fluid deliveries (87.4%), mean 177 steps |
+| `v4_v6_reward_warmup_on_penetration_logged.mov` | Same v4 policy under v6 reward with warmup on: penetrations are counted but not terminated. The exploit is visible but episodes continue. | v6 | on | 76 eps, 0% success, 25 overfill, 51 timeout, mean 355 steps |
+| `v7_v6_reward_warmup_off_penetration.mov` | **The diagnostic.** Same v4 policy under v6 reward with warmup off: penetration terminates immediately. 434 of 435 episodes end this way. | v6 | **off** | 435 eps, 0.2% task success, 434 integrity violations, mean 65 steps |
+| `v8_scripted_v6_warmup_off_success.mov` | **The fairness check.** Scripted controller under v6 with warmup off. Lifts to z = 0.25 m before transiting. 16/16 task success, zero penetration. | v6 | **off** | 16 eps, 100% task success, mean 208 steps |
+
+**On reproducibility:** the v4-policy-under-v4-reward run was recorded twice — once before and once after the rsl_rl API bypass patch (`run_play_manual`). Output was identical (87.4%, same per-bin breakdown). The bypass changed code structure, not physics or reward. Similarly for the v6-warmup-on run (both recorded, identical). Only the archived copies differ.
+
+**Archived in `docs/videos/archive/`:** earlier probe and false-start recordings, kept for working history.
 
 ### Reproducibility notes
 
