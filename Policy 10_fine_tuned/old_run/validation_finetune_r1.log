@@ -1,0 +1,130 @@
+=== action_override=none seed 17
+[Play action_override=none] 2700 steps x 64 envs: 539 eps, outcomes {'success': 521, 'time_out': 18}, success 96.7%, mean ep len 302; 31.6s
+[Play action_override=none] failures by furthest stage reached: {0: 15, 3: 2, 4: 1}
+[Play action_override=none] dish 0-5cm: 36/36 = 100.0%
+[Play action_override=none] dish 5-10cm: 117/118 = 99.2%
+[Play action_override=none] dish 10-15cm: 158/165 = 95.8%
+[Play action_override=none] dish 15-20cm: 183/192 = 95.3%
+[Play action_override=none] dish 20+cm: 27/28 = 96.4%
+[Play action_override=none] beaker 0-5cm: 31/31 = 100.0%
+[Play action_override=none] beaker 5-10cm: 105/107 = 98.1%
+[Play action_override=none] beaker 10-15cm: 174/180 = 96.7%
+[Play action_override=none] beaker 15-20cm: 176/185 = 95.1%
+[Play action_override=none] beaker 20+cm: 35/36 = 97.2%
+=== action_override=none seed 18
+[Play action_override=none] 2700 steps x 64 envs: 544 eps, outcomes {'success': 524, 'time_out': 20}, success 96.3%, mean ep len 301; 34.5s
+[Play action_override=none] failures by furthest stage reached: {0: 16, 3: 3, 4: 1}
+[Play action_override=none] dish 0-5cm: 26/26 = 100.0%
+[Play action_override=none] dish 5-10cm: 116/120 = 96.7%
+[Play action_override=none] dish 10-15cm: 172/176 = 97.7%
+[Play action_override=none] dish 15-20cm: 170/179 = 95.0%
+[Play action_override=none] dish 20+cm: 40/43 = 93.0%
+[Play action_override=none] beaker 0-5cm: 32/33 = 97.0%
+[Play action_override=none] beaker 5-10cm: 105/110 = 95.5%
+[Play action_override=none] beaker 10-15cm: 164/170 = 96.5%
+[Play action_override=none] beaker 15-20cm: 180/188 = 95.7%
+[Play action_override=none] beaker 20+cm: 43/43 = 100.0%
+=== action_override=none seed 19
+[Play action_override=none] 2700 steps x 64 envs: 553 eps, outcomes {'success': 538, 'time_out': 15}, success 97.3%, mean ep len 295; 39.2s
+[Play action_override=none] failures by furthest stage reached: {0: 13, 4: 2}
+[Play action_override=none] dish 0-5cm: 33/33 = 100.0%
+[Play action_override=none] dish 5-10cm: 110/113 = 97.3%
+[Play action_override=none] dish 10-15cm: 200/202 = 99.0%
+[Play action_override=none] dish 15-20cm: 158/167 = 94.6%
+[Play action_override=none] dish 20+cm: 37/38 = 97.4%
+[Play action_override=none] beaker 0-5cm: 35/35 = 100.0%
+[Play action_override=none] beaker 5-10cm: 93/100 = 93.0%
+[Play action_override=none] beaker 10-15cm: 195/199 = 98.0%
+[Play action_override=none] beaker 15-20cm: 180/184 = 97.8%
+[Play action_override=none] beaker 20+cm: 35/35 = 100.0%
+=== action_override=none seed 20
+[Play action_override=none] 2700 steps x 64 envs: 543 eps, outcomes {'success': 524, 'time_out': 19}, success 96.5%, mean ep len 299; 30.2s
+[Play action_override=none] failures by furthest stage reached: {0: 17, 3: 1, 4: 1}
+[Play action_override=none] dish 0-5cm: 38/39 = 97.4%
+[Play action_override=none] dish 5-10cm: 111/114 = 97.4%
+[Play action_override=none] dish 10-15cm: 171/177 = 96.6%
+[Play action_override=none] dish 15-20cm: 167/174 = 96.0%
+[Play action_override=none] dish 20+cm: 37/39 = 94.9%
+[Play action_override=none] beaker 0-5cm: 40/40 = 100.0%
+[Play action_override=none] beaker 5-10cm: 112/115 = 97.4%
+[Play action_override=none] beaker 10-15cm: 152/157 = 96.8%
+[Play action_override=none] beaker 15-20cm: 181/191 = 94.8%
+[Play action_override=none] beaker 20+cm: 39/40 = 97.5%
+=== action_override=none seed 21
+[Play action_override=none] 2700 steps x 64 envs: 559 eps, outcomes {'success': 549, 'time_out': 10}, success 98.2%, mean ep len 294; 32.3s
+[Play action_override=none] failures by furthest stage reached: {0: 9, 3: 1}
+[Play action_override=none] dish 0-5cm: 39/40 = 97.5%
+[Play action_override=none] dish 5-10cm: 106/107 = 99.1%
+[Play action_override=none] dish 10-15cm: 208/210 = 99.0%
+[Play action_override=none] dish 15-20cm: 157/162 = 96.9%
+[Play action_override=none] dish 20+cm: 39/40 = 97.5%
+[Play action_override=none] beaker 0-5cm: 42/42 = 100.0%
+[Play action_override=none] beaker 5-10cm: 112/114 = 98.2%
+[Play action_override=none] beaker 10-15cm: 172/176 = 97.7%
+[Play action_override=none] beaker 15-20cm: 188/191 = 98.4%
+[Play action_override=none] beaker 20+cm: 35/36 = 97.2%
+=== action_override=zeros seed 17
+[Play action_override=zeros] 2700 steps x 64 envs: 256 eps, outcomes {'time_out': 256}, success 0.0%, mean ep len 600; 31.8s
+[Play action_override=zeros] failures by furthest stage reached: {0: 256}
+[Play action_override=zeros] dish 0-5cm: 0/16 = 0.0%
+[Play action_override=zeros] dish 5-10cm: 0/55 = 0.0%
+[Play action_override=zeros] dish 10-15cm: 0/84 = 0.0%
+[Play action_override=zeros] dish 15-20cm: 0/92 = 0.0%
+[Play action_override=zeros] dish 20+cm: 0/9 = 0.0%
+[Play action_override=zeros] beaker 0-5cm: 0/14 = 0.0%
+[Play action_override=zeros] beaker 5-10cm: 0/47 = 0.0%
+[Play action_override=zeros] beaker 10-15cm: 0/97 = 0.0%
+[Play action_override=zeros] beaker 15-20cm: 0/74 = 0.0%
+[Play action_override=zeros] beaker 20+cm: 0/24 = 0.0%
+=== action_override=zeros seed 18
+[Play action_override=zeros] 2700 steps x 64 envs: 256 eps, outcomes {'time_out': 256}, success 0.0%, mean ep len 600; 30.2s
+[Play action_override=zeros] failures by furthest stage reached: {0: 256}
+[Play action_override=zeros] dish 0-5cm: 0/22 = 0.0%
+[Play action_override=zeros] dish 5-10cm: 0/40 = 0.0%
+[Play action_override=zeros] dish 10-15cm: 0/90 = 0.0%
+[Play action_override=zeros] dish 15-20cm: 0/81 = 0.0%
+[Play action_override=zeros] dish 20+cm: 0/23 = 0.0%
+[Play action_override=zeros] beaker 0-5cm: 0/17 = 0.0%
+[Play action_override=zeros] beaker 5-10cm: 0/50 = 0.0%
+[Play action_override=zeros] beaker 10-15cm: 0/102 = 0.0%
+[Play action_override=zeros] beaker 15-20cm: 0/74 = 0.0%
+[Play action_override=zeros] beaker 20+cm: 0/13 = 0.0%
+=== action_override=zeros seed 19
+[Play action_override=zeros] 2700 steps x 64 envs: 256 eps, outcomes {'time_out': 256}, success 0.0%, mean ep len 600; 38.1s
+[Play action_override=zeros] failures by furthest stage reached: {0: 256}
+[Play action_override=zeros] dish 0-5cm: 0/18 = 0.0%
+[Play action_override=zeros] dish 5-10cm: 0/62 = 0.0%
+[Play action_override=zeros] dish 10-15cm: 0/87 = 0.0%
+[Play action_override=zeros] dish 15-20cm: 0/71 = 0.0%
+[Play action_override=zeros] dish 20+cm: 0/18 = 0.0%
+[Play action_override=zeros] beaker 0-5cm: 0/11 = 0.0%
+[Play action_override=zeros] beaker 5-10cm: 0/48 = 0.0%
+[Play action_override=zeros] beaker 10-15cm: 0/87 = 0.0%
+[Play action_override=zeros] beaker 15-20cm: 0/96 = 0.0%
+[Play action_override=zeros] beaker 20+cm: 0/14 = 0.0%
+=== action_override=zeros seed 20
+[Play action_override=zeros] 2700 steps x 64 envs: 256 eps, outcomes {'time_out': 256}, success 0.0%, mean ep len 600; 29.2s
+[Play action_override=zeros] failures by furthest stage reached: {0: 256}
+[Play action_override=zeros] dish 0-5cm: 0/22 = 0.0%
+[Play action_override=zeros] dish 5-10cm: 0/58 = 0.0%
+[Play action_override=zeros] dish 10-15cm: 0/87 = 0.0%
+[Play action_override=zeros] dish 15-20cm: 0/78 = 0.0%
+[Play action_override=zeros] dish 20+cm: 0/11 = 0.0%
+[Play action_override=zeros] beaker 0-5cm: 0/18 = 0.0%
+[Play action_override=zeros] beaker 5-10cm: 0/54 = 0.0%
+[Play action_override=zeros] beaker 10-15cm: 0/82 = 0.0%
+[Play action_override=zeros] beaker 15-20cm: 0/85 = 0.0%
+[Play action_override=zeros] beaker 20+cm: 0/17 = 0.0%
+=== action_override=zeros seed 21
+[Play action_override=zeros] 2700 steps x 64 envs: 256 eps, outcomes {'time_out': 256}, success 0.0%, mean ep len 600; 34.9s
+[Play action_override=zeros] failures by furthest stage reached: {0: 255, 1: 1}
+[Play action_override=zeros] dish 0-5cm: 0/16 = 0.0%
+[Play action_override=zeros] dish 5-10cm: 0/42 = 0.0%
+[Play action_override=zeros] dish 10-15cm: 0/94 = 0.0%
+[Play action_override=zeros] dish 15-20cm: 0/91 = 0.0%
+[Play action_override=zeros] dish 20+cm: 0/13 = 0.0%
+[Play action_override=zeros] beaker 0-5cm: 0/20 = 0.0%
+[Play action_override=zeros] beaker 5-10cm: 0/55 = 0.0%
+[Play action_override=zeros] beaker 10-15cm: 0/74 = 0.0%
+[Play action_override=zeros] beaker 15-20cm: 0/88 = 0.0%
+[Play action_override=zeros] beaker 20+cm: 0/19 = 0.0%
