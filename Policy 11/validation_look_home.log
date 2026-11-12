@@ -1,0 +1,95 @@
+=== policy11.pt --look_pose home seed 17
+[Perception] AlexNet container locator from policy11.pt, image taken at the 'home' pose
+*** Policy 11 (MuJoCo 3.12.0): 64 envs, mode=play, phase=eval, vision=cnn, beaker=±0.175 m, dish=±0.175 m, episode=20s, obs=(64, 24) ***
+[Policy] loaded policy11.pt: in_dim=24, hidden=[256, 256, 128]
+[Play action_override=none] 2700 steps x 64 envs: 552 eps, outcomes {'success': 538, 'time_out': 14}, success 97.5%, mean ep len 295; 60.1s
+[Play action_override=none] failures by furthest stage reached: {0: 10, 3: 4}
+[Play action_override=none] perception error beaker: mean 0.71 mm, p95 1.50, max 2.62
+[Play action_override=none] perception error dish: mean 0.60 mm, p95 1.33, max 2.76
+[Play action_override=none] perception error in failed episodes: beaker mean 0.80 mm max 1.66, dish mean 0.79 mm max 1.20
+[Play action_override=none] dish 0-5cm: 43/43 = 100.0%
+[Play action_override=none] dish 5-10cm: 94/96 = 97.9%
+[Play action_override=none] dish 10-15cm: 180/184 = 97.8%
+[Play action_override=none] dish 15-20cm: 196/201 = 97.5%
+[Play action_override=none] dish 20+cm: 25/28 = 89.3%
+[Play action_override=none] beaker 0-5cm: 35/35 = 100.0%
+[Play action_override=none] beaker 5-10cm: 97/100 = 97.0%
+[Play action_override=none] beaker 10-15cm: 193/198 = 97.5%
+[Play action_override=none] beaker 15-20cm: 179/185 = 96.8%
+[Play action_override=none] beaker 20+cm: 34/34 = 100.0%
+=== policy11.pt --look_pose home seed 18
+[Perception] AlexNet container locator from policy11.pt, image taken at the 'home' pose
+*** Policy 11 (MuJoCo 3.12.0): 64 envs, mode=play, phase=eval, vision=cnn, beaker=±0.175 m, dish=±0.175 m, episode=20s, obs=(64, 24) ***
+[Policy] loaded policy11.pt: in_dim=24, hidden=[256, 256, 128]
+[Play action_override=none] 2700 steps x 64 envs: 555 eps, outcomes {'success': 543, 'time_out': 12}, success 97.8%, mean ep len 295; 62.8s
+[Play action_override=none] failures by furthest stage reached: {0: 8, 3: 3, 5: 1}
+[Play action_override=none] perception error beaker: mean 0.71 mm, p95 1.44, max 2.64
+[Play action_override=none] perception error dish: mean 0.58 mm, p95 1.21, max 2.75
+[Play action_override=none] perception error in failed episodes: beaker mean 1.03 mm max 2.64, dish mean 0.70 mm max 1.60
+[Play action_override=none] dish 0-5cm: 31/32 = 96.9%
+[Play action_override=none] dish 5-10cm: 125/128 = 97.7%
+[Play action_override=none] dish 10-15cm: 183/186 = 98.4%
+[Play action_override=none] dish 15-20cm: 161/164 = 98.2%
+[Play action_override=none] dish 20+cm: 43/45 = 95.6%
+[Play action_override=none] beaker 0-5cm: 31/31 = 100.0%
+[Play action_override=none] beaker 5-10cm: 98/103 = 95.1%
+[Play action_override=none] beaker 10-15cm: 191/194 = 98.5%
+[Play action_override=none] beaker 15-20cm: 182/186 = 97.8%
+[Play action_override=none] beaker 20+cm: 41/41 = 100.0%
+=== policy11.pt --look_pose home seed 19
+[Perception] AlexNet container locator from policy11.pt, image taken at the 'home' pose
+*** Policy 11 (MuJoCo 3.12.0): 64 envs, mode=play, phase=eval, vision=cnn, beaker=±0.175 m, dish=±0.175 m, episode=20s, obs=(64, 24) ***
+[Policy] loaded policy11.pt: in_dim=24, hidden=[256, 256, 128]
+[Play action_override=none] 2700 steps x 64 envs: 559 eps, outcomes {'success': 546, 'time_out': 13}, success 97.7%, mean ep len 294; 52.6s
+[Play action_override=none] failures by furthest stage reached: {0: 11, 3: 1, 5: 1}
+[Play action_override=none] perception error beaker: mean 0.75 mm, p95 1.49, max 2.74
+[Play action_override=none] perception error dish: mean 0.63 mm, p95 1.27, max 2.42
+[Play action_override=none] perception error in failed episodes: beaker mean 0.87 mm max 2.23, dish mean 0.74 mm max 1.50
+[Play action_override=none] dish 0-5cm: 40/40 = 100.0%
+[Play action_override=none] dish 5-10cm: 101/103 = 98.1%
+[Play action_override=none] dish 10-15cm: 196/199 = 98.5%
+[Play action_override=none] dish 15-20cm: 168/174 = 96.6%
+[Play action_override=none] dish 20+cm: 41/43 = 95.3%
+[Play action_override=none] beaker 0-5cm: 29/30 = 96.7%
+[Play action_override=none] beaker 5-10cm: 117/122 = 95.9%
+[Play action_override=none] beaker 10-15cm: 189/191 = 99.0%
+[Play action_override=none] beaker 15-20cm: 178/183 = 97.3%
+[Play action_override=none] beaker 20+cm: 33/33 = 100.0%
+=== policy11.pt --look_pose home seed 20
+[Perception] AlexNet container locator from policy11.pt, image taken at the 'home' pose
+*** Policy 11 (MuJoCo 3.12.0): 64 envs, mode=play, phase=eval, vision=cnn, beaker=±0.175 m, dish=±0.175 m, episode=20s, obs=(64, 24) ***
+[Policy] loaded policy11.pt: in_dim=24, hidden=[256, 256, 128]
+[Play action_override=none] 2700 steps x 64 envs: 559 eps, outcomes {'success': 546, 'time_out': 13}, success 97.7%, mean ep len 294; 68.4s
+[Play action_override=none] failures by furthest stage reached: {0: 6, 1: 2, 3: 5}
+[Play action_override=none] perception error beaker: mean 0.74 mm, p95 1.50, max 2.63
+[Play action_override=none] perception error dish: mean 0.60 mm, p95 1.25, max 2.13
+[Play action_override=none] perception error in failed episodes: beaker mean 1.18 mm max 2.63, dish mean 0.71 mm max 1.33
+[Play action_override=none] dish 0-5cm: 44/45 = 97.8%
+[Play action_override=none] dish 5-10cm: 122/124 = 98.4%
+[Play action_override=none] dish 10-15cm: 159/161 = 98.8%
+[Play action_override=none] dish 15-20cm: 192/196 = 98.0%
+[Play action_override=none] dish 20+cm: 29/33 = 87.9%
+[Play action_override=none] beaker 0-5cm: 43/43 = 100.0%
+[Play action_override=none] beaker 5-10cm: 111/111 = 100.0%
+[Play action_override=none] beaker 10-15cm: 165/169 = 97.6%
+[Play action_override=none] beaker 15-20cm: 189/198 = 95.5%
+[Play action_override=none] beaker 20+cm: 38/38 = 100.0%
+=== policy11.pt --look_pose home seed 21
+[Perception] AlexNet container locator from policy11.pt, image taken at the 'home' pose
+*** Policy 11 (MuJoCo 3.12.0): 64 envs, mode=play, phase=eval, vision=cnn, beaker=±0.175 m, dish=±0.175 m, episode=20s, obs=(64, 24) ***
+[Policy] loaded policy11.pt: in_dim=24, hidden=[256, 256, 128]
+[Play action_override=none] 2700 steps x 64 envs: 557 eps, outcomes {'success': 548, 'time_out': 9}, success 98.4%, mean ep len 293; 77.6s
+[Play action_override=none] failures by furthest stage reached: {0: 7, 3: 2}
+[Play action_override=none] perception error beaker: mean 0.71 mm, p95 1.51, max 3.06
+[Play action_override=none] perception error dish: mean 0.60 mm, p95 1.33, max 2.13
+[Play action_override=none] perception error in failed episodes: beaker mean 1.02 mm max 2.70, dish mean 0.50 mm max 1.25
+[Play action_override=none] dish 0-5cm: 29/30 = 96.7%
+[Play action_override=none] dish 5-10cm: 94/96 = 97.9%
+[Play action_override=none] dish 10-15cm: 222/223 = 99.6%
+[Play action_override=none] dish 15-20cm: 170/173 = 98.3%
+[Play action_override=none] dish 20+cm: 33/35 = 94.3%
+[Play action_override=none] beaker 0-5cm: 38/39 = 97.4%
+[Play action_override=none] beaker 5-10cm: 116/119 = 97.5%
+[Play action_override=none] beaker 10-15cm: 181/182 = 99.5%
+[Play action_override=none] beaker 15-20cm: 169/173 = 97.7%
+[Play action_override=none] beaker 20+cm: 44/44 = 100.0%

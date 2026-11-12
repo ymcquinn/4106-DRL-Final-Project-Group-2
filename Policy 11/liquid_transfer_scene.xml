@@ -1,0 +1,148 @@
+<mujoco model="liquid_transfer_scene">
+  <!-- MuJoCo version of the model 2 scene (Isaac Lab: LiquidTransferSceneCfg in
+       ../model_2_teacher_student_random_dish_positions/liquid_transfer_ts.py).
+       Robot base at the origin, so the world frame IS the robot frame used by the task. -->
+  <include file="panda_pipette.xml"/>
+
+  <!-- 240 Hz physics; the environment runs the IK at 120 Hz (2 physics steps) and the policy at 30 Hz
+       (Isaac Lab: sim.dt = 1/120, decimation 4). -->
+  <option timestep="0.00416667" integrator="implicitfast" gravity="0 0 -9.81"/>
+
+  <visual>
+    <headlight diffuse="0.4 0.4 0.4" ambient="0.3 0.3 0.3" specular="0.1 0.1 0.1"/>
+    <global azimuth="-37" elevation="-25" offwidth="1920" offheight="1080"/>
+    <quality shadowsize="4096"/>
+  </visual>
+
+  <asset>
+    <!-- Light grey tiles, similar to the Isaac Lab ground plane seen from the overhead camera -->
+    <texture type="2d" name="floor_tex" builtin="checker" rgb1="0.50 0.50 0.50" rgb2="0.58 0.58 0.58"
+      markrgb="0.45 0.45 0.45" mark="edge" width="256" height="256"/>
+    <material name="floor_mat" texture="floor_tex" texuniform="true" texrepeat="4 4" reflectance="0.0"/>
+    <material name="beaker_mat" rgba="0.1 0.3 0.9 1"/>
+    <material name="dish_mat" rgba="0.1 0.8 0.2 1"/>
+  </asset>
+
+  <worldbody>
+    <light name="sun" pos="0.5 0 2.5" dir="0 0 -1" directional="true" diffuse="0.8 0.8 0.8" castshadow="true"/>
+    <light name="fill" pos="1.5 -1.5 1.5" dir="-0.6 0.6 -0.5" directional="true" diffuse="0.3 0.3 0.3" castshadow="false"/>
+    <!-- contype 0 / conaffinity 1: collides with the robot's collision geoms (contype 1), never with other world geoms -->
+    <geom name="floor" type="plane" size="3 3 0.05" material="floor_mat" contype="0" conaffinity="1"/>
+
+    <!-- Containers: mocap bodies, i.e. kinematic rigid bodies the environment places at reset and physics never moves
+         (Isaac Lab: kinematic_enabled=True). Beaker radius 0.05, height 0.12 (rim at z = 0.12);
+         dish radius 0.08, height 0.02 (rim at z = 0.02). Positions below are the nominal ones. -->
+	<!--
+	  Hollow beaker collision model.
+
+	  Beaker body origin is at z = 0.06 m.
+	  Wall half-height is 0.06 m, giving a world-space rim at z = 0.12 m.
+	  Sixteen overlapping box segments approximate a cylindrical wall.
+	  The top remains open.
+	-->
+	<body name="beaker" mocap="true" pos="0.4 -0.2 0.06">
+
+	  <!-- Thin bottom disk: local z -0.055 to -0.045 -->
+	  <geom name="beaker_geom"
+		type="cylinder"
+		pos="0 0 -0.055"
+		size="0.05 0.005"
+		material="beaker_mat"
+		contype="0"
+		conaffinity="1"
+		mass="0.02"/>
+
+	  <!-- Ring walls: radius 0.048 m, radial thickness 0.004 m -->
+	  <geom name="beaker_wall_00"
+		type="box" pos="0.048000 0.000000 0"
+		size="0.002 0.010 0.060" euler="0 0 0.000000"
+		material="beaker_mat" contype="0" conaffinity="1" mass="0.005"/>
+
+	  <geom name="beaker_wall_01"
+		type="box" pos="0.044346 0.018369 0"
+		size="0.002 0.010 0.060" euler="0 0 0.392699"
+		material="beaker_mat" contype="0" conaffinity="1" mass="0.005"/>
+
+	  <geom name="beaker_wall_02"
+		type="box" pos="0.033941 0.033941 0"
+		size="0.002 0.010 0.060" euler="0 0 0.785398"
+		material="beaker_mat" contype="0" conaffinity="1" mass="0.005"/>
+
+	  <geom name="beaker_wall_03"
+		type="box" pos="0.018369 0.044346 0"
+		size="0.002 0.010 0.060" euler="0 0 1.178097"
+		material="beaker_mat" contype="0" conaffinity="1" mass="0.005"/>
+
+	  <geom name="beaker_wall_04"
+		type="box" pos="0.000000 0.048000 0"
+		size="0.002 0.010 0.060" euler="0 0 1.570796"
+		material="beaker_mat" contype="0" conaffinity="1" mass="0.005"/>
+
+	  <geom name="beaker_wall_05"
+		type="box" pos="-0.018369 0.044346 0"
+		size="0.002 0.010 0.060" euler="0 0 1.963495"
+		material="beaker_mat" contype="0" conaffinity="1" mass="0.005"/>
+
+	  <geom name="beaker_wall_06"
+		type="box" pos="-0.033941 0.033941 0"
+		size="0.002 0.010 0.060" euler="0 0 2.356194"
+		material="beaker_mat" contype="0" conaffinity="1" mass="0.005"/>
+
+	  <geom name="beaker_wall_07"
+		type="box" pos="-0.044346 0.018369 0"
+		size="0.002 0.010 0.060" euler="0 0 2.748894"
+		material="beaker_mat" contype="0" conaffinity="1" mass="0.005"/>
+
+	  <geom name="beaker_wall_08"
+		type="box" pos="-0.048000 0.000000 0"
+		size="0.002 0.010 0.060" euler="0 0 3.141593"
+		material="beaker_mat" contype="0" conaffinity="1" mass="0.005"/>
+
+	  <geom name="beaker_wall_09"
+		type="box" pos="-0.044346 -0.018369 0"
+		size="0.002 0.010 0.060" euler="0 0 3.534292"
+		material="beaker_mat" contype="0" conaffinity="1" mass="0.005"/>
+
+	  <geom name="beaker_wall_10"
+		type="box" pos="-0.033941 -0.033941 0"
+		size="0.002 0.010 0.060" euler="0 0 3.926991"
+		material="beaker_mat" contype="0" conaffinity="1" mass="0.005"/>
+
+	  <geom name="beaker_wall_11"
+		type="box" pos="-0.018369 -0.044346 0"
+		size="0.002 0.010 0.060" euler="0 0 4.319690"
+		material="beaker_mat" contype="0" conaffinity="1" mass="0.005"/>
+
+	  <geom name="beaker_wall_12"
+		type="box" pos="0.000000 -0.048000 0"
+		size="0.002 0.010 0.060" euler="0 0 4.712389"
+		material="beaker_mat" contype="0" conaffinity="1" mass="0.005"/>
+
+	  <geom name="beaker_wall_13"
+		type="box" pos="0.018369 -0.044346 0"
+		size="0.002 0.010 0.060" euler="0 0 5.105088"
+		material="beaker_mat" contype="0" conaffinity="1" mass="0.005"/>
+
+	  <geom name="beaker_wall_14"
+		type="box" pos="0.033941 -0.033941 0"
+		size="0.002 0.010 0.060" euler="0 0 5.497787"
+		material="beaker_mat" contype="0" conaffinity="1" mass="0.005"/>
+
+	  <geom name="beaker_wall_15"
+		type="box" pos="0.044346 -0.018369 0"
+		size="0.002 0.010 0.060" euler="0 0 5.890486"
+		material="beaker_mat" contype="0" conaffinity="1" mass="0.005"/>
+
+	</body>
+    <body name="petri_dish" mocap="true" pos="0.4 0.2 0.01">
+      <geom name="dish_geom" type="cylinder" size="0.08 0.01" material="dish_mat" contype="0" conaffinity="1" mass="0.1"/>
+    </body>
+
+    <!-- Overhead camera. Isaac Lab: pos (0.4, 0.05, 1.0), looking straight down, focal 24 mm on a 20.955 mm aperture
+         = 47.2 deg field of view; image up = world +x, image right = world -y (robot base at the bottom edge,
+         beaker on the right, dish on the left). MuJoCo cameras look along -z with +y up, hence xyaxes. -->
+    <camera name="overhead" pos="0.4 0.05 1.0" xyaxes="0 -1 0 1 0 0" fovy="47.2"/>
+    <!-- Default viewer camera, same eye/look-at as the Isaac Lab visualizer -->
+    <camera name="viewer" pos="1.6 -1.2 0.9" xyaxes="0.707 0.707 0 -0.311 0.311 0.898"/>
+  </worldbody>
+</mujoco>

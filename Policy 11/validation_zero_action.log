@@ -1,0 +1,1 @@
+[Play action_override=zeros] 2700 steps x 64 envs: 256 eps, outcomes {'time_out': 256}, success 0.0%, mean ep len 600; 51.5s
