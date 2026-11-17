@@ -1,0 +1,41 @@
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Local environments and editors
+.venv/
+venv/
+.vscode/
+.idea/
+
+# Windows metadata
+*:Zone.Identifier
+*:mshield
+
+# Logs and generated previews
+*.log
+camera_preview_*.png
+
+# Generated diagnostics
+policy11_timeouts_*.csv
+policy11_failures_*.csv
+policy11_timeout_*.csv
+policy11_timeout_*.png
+
+# Historical source and README backups
+liquid_transfer_m3_v11_pre_timeout_diagnostics.py
+plot_policy11_timeouts.py
+README_original_policy11.txt
+
+# Historical local baselines
+baseline_pre_endpoint_finetune_*/
+baseline_endpoint_finetune1_*/
+baseline_dish_finetune2_*/
+baseline_safety_finetune3_*/
+baseline_completion_finetune4_*/
+
+# Superseded checkpoints
+policy11.pt
+checkpoints/endpoint_finetune.pt
+checkpoints/dish_finetune.pt
+checkpoints/safety_finetune.pt

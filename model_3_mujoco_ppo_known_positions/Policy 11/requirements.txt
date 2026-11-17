@@ -1,0 +1,11 @@
+# Validated Policy 11 environment
+numpy==2.4.6
+mujoco==3.15.0
+Pillow==12.3.0
+
+# Validated separately:
+# Python 3.11.17
+# PyTorch 2.14.1+cu130
+#
+# Install the PyTorch build appropriate for the local
+# CPU or CUDA environment before running Policy 11.
